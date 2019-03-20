@@ -1,0 +1,14 @@
+
+{% extends 'cadastro/base.html' %}
+
+{% block content %}
+    <h1>Deletar Pessoa</h1>
+    <form method="POST" class="post-form"> {% csrf_token %}
+	    Você tem certeza que deseja excluir esta pessoa ? 
+	    <p>Nome:<strong>{{pessoa.nome}}</strong></p>
+	    <button type="submit" class="save btn btn-default">
+	    	Confirmar Exclusão!
+	    </button>    	
+    </form>
+    
+{% endblock %}

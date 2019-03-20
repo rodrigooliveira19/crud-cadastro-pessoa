@@ -1,0 +1,17 @@
+{% extends 'cadastro/base.html' %}
+
+{% block content %}
+
+{% for pessoa in pessoas %}    
+	<div> 
+	     <!--href passa a informação (referência da pessoa clicada) -->       
+		<h2><a href="{% url 'cadastro_detail' pk=pessoa.pk %}">{{ pessoa.nome }}</a></h2> 
+		<p><strong>Código:</strong> {{ pessoa.codigo }}</p>   
+		<p><strong>RG:</strong> {{ pessoa.rg }}</p>   
+		<p><strong>CPF:</strong> {{ pessoa.cpf }}</p>   
+		<p><strong>Email:</strong> {{ pessoa.email }}</p>        
+		<p><strong>Endereco:</strong> {{ pessoa.endereco|linebreaksbr }}</p>    
+	</div> 
+	{% endfor %}
+
+{% endblock %}

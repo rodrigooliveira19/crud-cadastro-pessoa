@@ -1,0 +1,13 @@
+{% extends 'cadastro/base.html' %}
+
+{% block content %}
+    <h1>Nova Pessoa</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+    	{{ form.as_p}} <!--Pega o padrão de formulário pessoa e desenha na tela-->
+    	<button type="submit" class="save btn btn-default">Save</button>
+    	
+    </form>    
+
+ {% endblock%}
+ 
+    	
